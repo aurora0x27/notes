@@ -18,7 +18,9 @@ B站视频教程 -- [你想有多PWN](https://www.bilibili.com/video/BV1mr4y1Y7f
 
 gdb调试器, 最基本的调试工具, 在`.gdbinit`中写入`set disassembly-flavor intel`设置反汇编风格为intel
 
-[pwndbg]() -- 一个gdb插件
+[gdb教程](https://aurora0x27.github.io/2024/11/16/GDBguide/)
+
+[pwndbg](https://github.com/pwndbg/pwndbg) -- 一个gdb插件
 
 [ida-pro]() -- 源码级反编译工具
 
