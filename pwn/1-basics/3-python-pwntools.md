@@ -71,3 +71,25 @@ if __name__ == "__main__":
 ```
 
 ## pwntools库
+
+以[demo1.c](../code/demo1.c)的编译产物为例(`gcc demo1.c -std=c89 -no-pie`), 使用pwn库的一个案例如下
+
+```python
+import pwn
+
+# assign 
+pwn.context(log_level='debug', arch='i386', os='linux')
+target = './a.out'
+
+# start the process
+io = pwn.process(target)
+elf = pwn.ELF(target)
+rop = pwn.ROP(target)
+
+payload = '\x61' * 9
+
+# after receiving string 'input: \n', send the payload
+io.recvuntil('input: \n')
+io.send(payload + '\n')
+io.interactive()
+```
